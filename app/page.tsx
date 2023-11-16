@@ -4,9 +4,10 @@ import NavBar from '@/components/NavBar'
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden bg-white">
       <NavBar />
       <Hero />
+      <About />
       <About />
       <About />
     </main>

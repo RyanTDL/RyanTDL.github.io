@@ -16,7 +16,8 @@ const VantaBackground = ({ children }) => {
                 // yOffset: 0.1,
                 size: 1.5,
                 amplitudeFactor: 1.5,
-                //////BackgroundColor: 0x131a43,
+                //baseColor: 0x5420b6,
+                // backgroundColor: 0xd0e16
             }))
         }
 
