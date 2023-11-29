@@ -2,7 +2,7 @@ import Link from '@/node_modules/next/link'
 
 const NavBar = () => {
     return (
-            <ul className="flex bg-inherit sticky top-0 py-10 justify-center space-x-16 md:space-x-16 lg:space-x-20">
+            <ul className="w-full flex py-10 justify-around">
                 <li className="group">
                     <Link href="#about" className="md:text-xl inline-block">
                         About
