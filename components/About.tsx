@@ -2,7 +2,7 @@ import Image from "@/node_modules/next/image"
 
 const About = () => {
     return (
-        <div className="overflow-hidden container mx-auto py-10 md:py-10 lg:py-10 flex flex-col gap-4 lg:gap-8">
+        <div id="about" className="overflow-hidden container mx-auto py-10 md:py-10 lg:py-10 flex flex-col gap-4 lg:gap-8">
             <p className="font-bold text-4xl lg:text-5xl text-center">Introducing Me</p>
             <div className="flex flex-row gap-14">
                 <div className="w-3/4 my-auto">

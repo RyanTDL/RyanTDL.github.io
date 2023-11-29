@@ -26,6 +26,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* .typewriter-cursor {
   display: inline-block;
   width: 1px;

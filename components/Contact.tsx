@@ -3,7 +3,7 @@ import { IoMdMail } from "react-icons/io";
 
 const Contact = () => {
     return (
-        <div className="container mx-auto py-10 md:py-20 lg:py-30 text-center">
+        <div id="contact" className="container mx-auto py-10 md:py-20 lg:py-30 text-center">
             <div>
                 <p className="font-bold text-4xl lg:text-5xl">Let's Connect! </p>
                 <p className="text-lg lg:text-2xl mx-auto pt-4 lg:pt-8 max-w-4xl">
