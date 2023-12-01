@@ -7,29 +7,30 @@ interface ProjectCardProps {
     projectName: string;
     projectDescription: string;
     projectTechStack: string;
+    projectImage: string;
 }
 
-const ProjectCard = ({projectLink, projectName, projectDescription, projectTechStack}:ProjectCardProps) => {
+const ProjectCard = ({projectLink, projectName, projectDescription, projectTechStack, projectImage}:ProjectCardProps) => {
     return (
-        <div className="flex container border-2 border-black rounded-md shadow-xl hover:scale-110 p-4">
+        <div className="flex flex-col md:flex-row lg:flex-row items-center gap-6 container border-2 border-black rounded-md shadow-xl hover:scale-110 p-4">
+            <div className='w-1/3 flex justify-end'>
+                <Image
+                    src={`/assets/${projectImage}.jpg`} 
+                    alt="Personal photo of myself!" 
+                    width= {300} 
+                    height={300} 
+                    style={{borderRadius: "5%"}}
+                />
+            </div>
             <div className="flex flex-col w-2/3 gap-4 px-4">
-                <p className="font-medium text-xl">{projectName}</p>
-                <p className="text-slate-600">{projectDescription}</p>
+                <p className="font-medium text-xl md:text-3xl">{projectName}</p>
+                <p className="text-slate-600 text-base md:text-xl">{projectDescription}</p>
                 <div className='flex flex-row gap-3 items-center'>
                     <a className="hover:opacity-50" href={projectLink}>
                         <FaGithub size={30} />
                     </a>
-                    <p className="text-slate-900">{projectTechStack}</p>
+                    <p className="text-slate-900 text-base md:text-xl">{projectTechStack}</p>
                 </div>
-            </div>
-            <div className='w-1/3 flex justify-end'>
-                <Image
-                    src="/assets/personal_pic.jpg" 
-                    alt="Personal photo of myself!" 
-                    width= {500} 
-                    height={500} 
-                    style={{borderRadius: "5%", width: '80%', height: 'auto'}}
-                />
             </div>
         </div>
     )
@@ -45,18 +46,21 @@ const Projects = () => {
                     projectName="Fundamentals of Systems Design"
                     projectDescription="A robotic food delivery system. Developed to autonomously deliver drinks in a restaurant setting."
                     projectTechStack="ROS2, Python, C++, SolidWorks"
+                    projectImage="eg2310_project"
                 />
                 <ProjectCard 
                     projectLink="https://github.com/RyanTDL/NUS-Orbital-2023"
                     projectName="LifeQuest: A Gamified Productivity App"
-                    projectDescription="Developed as part of NUS Orbital 2023. LifeQuest is a gamified productivity app that aims to help users track their daily habits in a fun and engaging way."
+                    projectDescription="Developed as part of NUS Orbital 2023. LifeQuest aims to help users track their daily habits in a fun and engaging way."
                     projectTechStack="Figma, React Native, Firebase, JavaScript"
+                    projectImage="orbital_project"
                 />
                 <ProjectCard 
                     projectLink="https://github.com/Steer-App-RC4/steer-mobile-app"
                     projectName="The STEER Mobile App"
                     projectDescription="A sharing economy platform to empower homestays in rural communities in Mukteshwar, India, to rent their homes to tourists."
                     projectTechStack="React Native, Firebase, TypeScript"
+                    projectImage="steer_app_project"
                 />
             </div>
         </div>
