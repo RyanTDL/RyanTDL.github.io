@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({projectLink, projectName, projectDescription, projectTechStack, projectImage}:ProjectCardProps) => {
     return (
-        <div className="flex flex-col md:flex-row lg:flex-row items-center gap-6 container border-2 border-black rounded-md shadow-xl hover:scale-110 p-4">
+        <div className="flex flex-col max-w-screen-md max md:flex-row lg:flex-row items-center gap-6 container border-2 border-black rounded-3xl shadow-xl hover:scale-110 p-6">
             <div className='w-1/3 flex justify-end'>
                 <Image
                     src={`/assets/${projectImage}.jpg`} 
@@ -40,7 +40,7 @@ const Projects = () => {
     return (
         <div id="projects" className="overflow-hidden container mx-auto px-10 py-10 md:py-10 lg:py-10 flex flex-col gap-4 lg:gap-8 justify-center items-center">
             <p className="font-bold text-4xl lg:text-5xl">Projects</p>
-            <div className="w-11/12 flex flex-col gap-16">
+            <div className="w-11/12 flex flex-col items-center gap-16">
                 <ProjectCard 
                     projectLink="https://github.com/TurtleBot-EG2310-NUS/auto_nav"
                     projectName="Fundamentals of Systems Design"

@@ -3,7 +3,8 @@ import Link from '@/node_modules/next/link'
 
 const NavBar = () => {
     return (
-            <ul className="w-full flex py-10 justify-around items-center">
+        <div className='flex justify-center'>
+            <ul className="w-full flex py-10 justify-around items-center lg:max-w-screen-md">
                 <li className="group">
                     <Link href="#about" className="md:text-xl inline-block">
                         About
@@ -30,14 +31,16 @@ const NavBar = () => {
                 </li>
                 <li className="group">
                     <a download href="assets/TeoDeLiangRyan_resume.pdf" className="md:text-xl inline-block">
-                        <div className='text-center'>
+                        {/* <div className='text-center'>
                             <p>Download</p>
                             <p>my resume</p>
-                        </div>
+                        </div> */}
+                        Resume
                         <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"/>
                     </a>
                 </li>
             </ul>
+        </div>
     )
 }
 
