@@ -8,10 +8,10 @@ import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-white">
+    <main className="overflow-hidden text-white">
       <NavBar />
       <Hero />
-      <About />
+      {/* <About /> */}
       <Experience />
       <Projects />
       {/* <ResponsiveCarousel/> */}

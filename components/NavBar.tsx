@@ -4,7 +4,7 @@ import Link from '@/node_modules/next/link'
 const NavBar = () => {
     return (
         <div className='flex justify-center'>
-            <ul className="w-full flex py-10 justify-around items-center lg:max-w-screen-md">
+            <ul className="w-full flex py-4 justify-around items-center lg:max-w-screen-md">
                 <li className="group">
                     <Link href="#about" className="md:text-xl inline-block">
                         About
