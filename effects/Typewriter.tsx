@@ -1,29 +1,39 @@
-// components/Typewriter.tsx
+'use client'
 import React, { useState, useEffect } from 'react';
+import { text } from 'stream/consumers';
 
-interface TypewriterProps {
-    text: string;
-    styling: string;
-    typingDelay?: number;
-}
-
-const Typewriter: React.FC<TypewriterProps> = ({ text, styling, typingDelay = 100 }) => {
+const Typewriter = () => {
     const [currentText, setCurrentText] = useState('');
+    let textListIndex = 0;
+    let index = 0;
+    let typingForward = true;
+    const textList = ['F ull Stack Developer', 'A spiring Entrepreneur', 'F ull-Time Idiot', 'P art-Time Academic Weapon'];
+    let text = textList[textListIndex];
 
     useEffect(() => {
-        let index = 0;
         const intervalId = setInterval(() => {
-            setCurrentText((prev) => prev + text.charAt(index));
-            index++;
-            if (index === text.length) {
-                clearInterval(intervalId);
+            
+            if (typingForward) {
+                setCurrentText((prev) => prev + text.charAt(index));
+                index++;
+                if (index == text.length) {
+                    typingForward = false;
+                }
+            } else {
+                setCurrentText((prev) => prev.slice(0, -1));
+                index--;
+                if (index == 0) {
+                    typingForward = true;
+                    textListIndex = (textListIndex==3) ? 0 : (textListIndex + 1) 
+                    text = textList[textListIndex];
+                }
             }
-        }, typingDelay);
+        }, 200);
 
         return () => clearInterval(intervalId);
-    }, [text, typingDelay]);
+    }, []); // Dependencies array should be empty to avoid resetting the effect unnecessarily
 
-    return <div className={styling}>{currentText}</div>;
+    return <div className='font-bold text-6xl text-white'>{currentText}</div>;
 };
 
 export default Typewriter;

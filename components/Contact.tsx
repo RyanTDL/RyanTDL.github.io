@@ -1,18 +1,25 @@
+import React from 'react'
 import { FaLinkedin, FaGithub, FaTelegram} from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 
-const Contact = () => {
-    return (
-        <div id="contact" className="container mx-auto px-10 py-10 md:py-20 lg:py-30 text-center">
-            <div>
-                <p className="font-bold text-4xl lg:text-5xl">Let's Connect! </p>
-                <p className="text-lg lg:text-2xl mx-auto pt-4 lg:pt-8 max-w-4xl">
-                    I'm currently looking for Machine Learning or Software Engineering opportunities.
-                    If you have a cool project you would like to collaborate on, or just want to have a chat, free feel to reach out!
-                </p>
-            </div>
 
-            <div className="flex flex-row justify-center gap-10 pt-10 lg:pt-15">
+const Contact = () => {
+
+    return (
+        <div id='contact' className='w-full lg:h-screen'>
+            <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
+                <p className='uppercase text-5xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-500 pb-4'>
+                    Contact
+                </p>
+
+                <div>
+                    <p className="text-lg lg:text-2xl pt-4 lg:pt-8 max-w-4xl">
+                        I'm currently looking for any Software Engineering or Machine Learning opportunities.
+                        If you have a cool project you would like to collaborate on, or just want to have a chat, free feel to reach out!
+                    </p>
+                </div>
+
+                <div className="flex flex-row justify-center gap-10 pt-20 lg:pt-15">
                 <a className="hover:opacity-50" href="https://linkedin.com/in/ryan-teo/"> 
                     <FaLinkedin size={50} />
                 </a>
@@ -25,6 +32,9 @@ const Contact = () => {
                 <a className="hover:opacity-50" href="mailto:teodeliangryan@u.nus.edu">
                     <IoMdMail size={50} />
                 </a>
+            </div>
+
+
             </div>
         </div>
     )
