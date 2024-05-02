@@ -33,7 +33,7 @@ const Typewriter = () => {
         return () => clearInterval(intervalId);
     }, []); // Dependencies array should be empty to avoid resetting the effect unnecessarily
 
-    return <div className='font-bold text-6xl text-white'>{currentText}</div>;
+    return <div>{currentText}</div>;
 };
 
 export default Typewriter;

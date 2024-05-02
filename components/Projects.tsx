@@ -3,13 +3,11 @@ import ProjectCard from './ProjectCard'
 
 const Projects = () => {
     return (
-        <div id='projects' className='w-full'>
-            <div className='max-w-[1240px] mx-auto px-2 py-16'>
+        <div id='projects' className='w-full lg:h-screen p-2'>
+            <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
                 <p className='uppercase text-5xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-500 pb-4'>
                     Projects
                 </p>
-
-
                 <div className='grid md:grid-cols-2 gap-8'>
 
                     <ProjectCard

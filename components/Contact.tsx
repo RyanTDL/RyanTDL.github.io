@@ -6,8 +6,8 @@ import { IoMdMail } from "react-icons/io";
 const Contact = () => {
 
     return (
-        <div id='contact' className='w-full lg:h-screen'>
-            <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
+        <div id='contact' className='w-full lg:h-screen p-2'>
+            <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
                 <p className='uppercase text-5xl tracking-widest font-bold-200 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-500 pb-4'>
                     Contact
                 </p>
