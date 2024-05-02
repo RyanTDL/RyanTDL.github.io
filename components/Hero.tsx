@@ -1,5 +1,3 @@
-// 'use client' // Components are client-side, not server-side
-
 import React from 'react'
 import Typewriter from '@/effects/Typewriter'
 import Image from '@/node_modules/next/image'

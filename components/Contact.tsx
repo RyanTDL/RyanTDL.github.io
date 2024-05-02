@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaLinkedin, FaGithub, FaTelegram} from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaTelegram} from "@/node_modules/react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 
 
