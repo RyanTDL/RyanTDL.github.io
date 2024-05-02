@@ -1,7 +1,15 @@
 import React from 'react'
 import Link from '@/node_modules/next/link'
 
-const ProjectItem = ({ title, backgroundImg, tech, projectUrl, desc}) => {
+interface ProjectItemProps {
+    title: string
+    backgroundImg: string
+    tech: string
+    projectUrl: string
+    desc: string
+}
+
+const ProjectItem = ({ title, backgroundImg, tech, projectUrl, desc} : ProjectItemProps) => {
     return (
         <div className='flex justify-center h-[540px] max-w-[530px] min-w-full my-1 shadow-xl shadow-gray-400 rounded-xl cursor-pointer hover:scale-105 ease-in duration-100'>
             <div className='my-0 py-0 min-w-full'>
