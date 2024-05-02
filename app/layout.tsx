@@ -6,8 +6,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: "Ryan Teo's Website",
-  description: 'Welcome to my website!',
-  script: 'three.min.js',  
+  description: 'Personal portfolio website',
 }
 
 export default function RootLayout({
